@@ -1,0 +1,201 @@
+/* Generell stil for crypto-siden */
+.crypto-page {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: black; /* Bakgrunn utenfor innhold er svart */
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+  margin-top: 0;
+  color: rgb(0, 0, 0); /* Tekst er svart */
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgb(255, 255, 255); /* Solid farge er hvit */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 3;
+  color: black; /* Tekst er svart */
+}
+
+/* Logo styling */
+.navbar-logo {
+  height: 60px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Nav links styling */
+.nav-links ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 100px;
+}
+
+.nav-links li {
+  display: inline-block;
+  color: black; /* Tekst er svart */
+}
+
+/* Enhetlig knappestil for alle knapper */
+.nav-link,
+.reload-button,
+.weather-button,
+.crypto-button {
+  background-color: #FEF768;
+  color: black; /* Tekst er svart */
+  border: 1px solid black;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-link:hover,
+.reload-button:hover,
+.weather-button:hover,
+.crypto-button:hover {
+  background-color: black;
+  color: rgb(16, 173, 152); /* Bytter farge ved hover for kontrast */
+}
+
+/* Crypto Widget styling */
+.crypto-widget {
+  background-color: rgb(53, 49, 49); /* Solid farge er hvit */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 1920px;
+  margin: 120px auto 40px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding-top: 90px;
+  color: rgb(104, 89, 89); /* Tekst er svart */
+}
+
+/* Sorteringsknapper */
+.sort-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.sort-buttons button {
+  background-color: #FEF768; /* Solid farge er hvit */
+  color: rgb(0, 0, 0); /* Tekst er svart */
+  border: 1px solid rgb(172, 165, 66);
+  padding: 10px 20px;
+  margin: 0 8px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.sort-buttons button:hover {
+  background-color: rgb(151, 202, 30);
+  color: rgb(70, 69, 69);
+}
+
+/* Liste-styling */
+.crypto-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.crypto-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 3px solid rgb(0, 0, 0); /* Endret til svart */
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  color: rgb(255, 255, 255); /* Tekst er svart */
+}
+
+.crypto-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.crypto-icon {
+  margin-right: 10px;
+}
+
+/* Responsivitet */
+@media (max-width: 1024px) {
+  .crypto-widget {
+    width: 100%;
+    background-size: 120px auto;
+  }
+
+  .navbar-logo {
+    height: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .crypto-widget {
+    width: 95%;
+    background-size: 100px auto;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .nav-links li {
+    display: block;
+  }
+
+  .nav-link {
+    padding: 10px 0;
+  }
+}
+
+.price-change {
+  font-weight: bold;
+}
+
+.positive {
+  color: green;
+}
+
+.negative {
+  color: red;
+}
+
+
+/* Feilmelding og lastemelding */
+.loading-message,
+.error-message {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: black; /* Tekst er svart */
+}

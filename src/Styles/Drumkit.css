@@ -1,0 +1,100 @@
+/* Generelle stiler for trommesettet */
+/* src/styles/Drumkit.css */
+.drumkit-page {
+  background-image: url('/Scene.webp'); /* Sett riktig bilde */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh; /* Gjør at siden dekker hele visningen */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.drum-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.drum-button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #520e0e;
+  border: 2px solid #93ce45;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Bildene i knappene */
+.drum-button img {
+  max-width: 70%;  /* Maksimal bredde for bildet */
+  max-height: 70%; /* Maksimal høyde for bildet */
+  object-fit: contain;
+  transition: opacity 0.2s ease;  /* Myk overgang for bildeendringer */
+}
+
+/* Aktiv knapp - visuell tilbakemelding når trommen er aktiv */
+.drum-button.active {
+  background-color: #ff6600; /* Endrer bakgrunnsfarge når aktiv */
+  border-color: #ff4500;  /* Endrer kantfargen */
+  transform: scale(1.1);  /* Litt større når aktiv */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  animation: activeAnimation 0.3s ease-out; /* Legg til en liten animasjon når aktiv */
+}
+
+/* Aktiverte bilder */
+.drum-button.active img {
+  opacity: 0.8; /* Gjør bildet mer gjennomsiktig når aktiv */
+}
+
+/* Indikasjon for tastetrykk - visuell tilbakemelding på tekst */
+.drum-button.active span {
+  color: #ffffff; /* Endrer tekstfargen når aktiv */
+  font-weight: bold; /* Gjør teksten fet */
+}
+
+/* Animasjon for aktiv tilstand */
+@keyframes activeAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* Styling for knappene når de er aktive */
+.drum-button span {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: bolder;
+}
+
+/* Tilbakemelding på tastetrykk - bakgrunnsfarge for containeren */
+.drum-container .active {
+  background-color: #4CAF50; /* Indikerer aktiv tast */
+}
+
+.drum-container .active:hover {
+  background-color: #45a049; /* Hover effekt på aktiv knapp */
+}
+
+
+  
