@@ -47,7 +47,8 @@ const CryptoWidget = () => {
 
   return (
     <div className="crypto-widget">
-      <img src="/Cryptosite.png" alt="Crypto Logo" className="crypto-logo" />
+      {/* Opprinnelig bildekilde */}
+      <img src="../cryptosite.png" alt="Crypto Logo" className="crypto-logo" />
 
       {/* Sorteringsknapper */}
       <div className="sort-buttons">
@@ -72,4 +73,3 @@ const CryptoWidget = () => {
 };
 
 export default CryptoWidget;
-

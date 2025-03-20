@@ -7,7 +7,7 @@ import DrumKit from "./pages/Drumkit"; // Legger til import for DrumKit
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/TorFolio"> {/* 👈 Legger til basename her */}
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/projects/DrumKit" element={<DrumKit />} />
@@ -19,6 +19,7 @@ const App = () => {
 };
 
 export default App;
+
 
 
 

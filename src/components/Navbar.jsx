@@ -9,9 +9,7 @@ const NavBar = () => {
   const getLogo = () => {
     switch (location.pathname) {
       case '/projects/crypto':
-        return '/Basecoin.png'; // Erstatt med banen til logoen for Crypto
-      case '/projects/weather':
-        return '/weather-logo.png'; // Erstatt med banen til logoen for Weather
+        return '../basecoin.png'; // Erstatt med banen til logoen for Crypto
       default:
         return '/default-logo.png'; // Standard logo for Hjem
     }
@@ -21,9 +19,7 @@ const NavBar = () => {
   const getNavBarStyles = () => {
     switch (location.pathname) {
       case '/projects/crypto':
-        return { backgroundColor: '#080808', color: '#130d0d' }; // Mørk tema for Crypto
-      case '/projects/weather':
-        return { backgroundColor: '#405677', color: '#fff' }; // Blå tema for Weather
+        return { backgroundColor: '#312828', color: '#fff' }; // Blå tema for Crypto
       default:
         return { backgroundColor: '#fff', color: '#000' }; // Standard tema for Hjem
     }
@@ -41,8 +37,6 @@ const NavBar = () => {
         <ul>
           {/* Reload-knapp med stil */}
           <li><button onClick={handleReload} className="reload-button">Reload</button></li>
-          {/* Weather lenke */}
-          <li><a href="/projects/weather" className="nav-link">Weather</a></li>
           {/* Home lenke som leder til MainPage.jsx */}
           <li><a href="/" className="nav-link">Home</a></li>
         </ul>
@@ -52,6 +46,8 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+
 
 
 

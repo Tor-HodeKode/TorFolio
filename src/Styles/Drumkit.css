@@ -9,6 +9,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: #fff; /* Hvit tekstfarge for bedre kontrast */
+  padding: 20px;
 }
 
 .drum-container {
@@ -36,6 +38,7 @@
   position: relative;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  user-select: none; /* Hindrer markering av tekst */
 }
 
 /* Bildene i knappene */
@@ -85,6 +88,7 @@
   font-size: 15px;
   color: #ffffff;
   font-weight: bolder;
+  letter-spacing: 1px;
 }
 
 /* Tilbakemelding på tastetrykk - bakgrunnsfarge for containeren */
@@ -94,6 +98,68 @@
 
 .drum-container .active:hover {
   background-color: #45a049; /* Hover effekt på aktiv knapp */
+}
+
+.drumkit-section {
+  padding: 20px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.drum-kit-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.drumkit-instructions {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.drumkit-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Responsivitet for mindre skjermer */
+@media (max-width: 768px) {
+  .drum-container {
+    gap: 10px;
+  }
+
+  .drum-button {
+    width: 80px;
+    height: 80px;
+  }
+
+  .drumkit-title {
+    font-size: 2rem;
+  }
+
+  .drumkit-instructions {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .drum-button {
+    width: 60px;
+    height: 60px;
+  }
+
+  .drumkit-title {
+    font-size: 1.5rem;
+  }
+
+  .drumkit-instructions {
+    font-size: 0.9rem;
+  }
 }
 
 
