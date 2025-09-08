@@ -8,6 +8,9 @@ import "../styles/Mainpage.css";
 
 const MainPage = () => {
   useEffect(() => {
+    // Scroll til toppen ved refresh
+    window.scrollTo(0, 0);
+
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const maxScroll = document.body.scrollHeight - window.innerHeight;
@@ -27,7 +30,7 @@ const MainPage = () => {
 
       <Header />
       <section className="logo">
-        <img src="Logo.png" alt="Logo" />
+        <img src="/Logo.png" alt="Logo for TorFolio" />
       </section>
 
       <nav id="side-navbar">
@@ -59,14 +62,36 @@ const MainPage = () => {
         <div className="projects-container">
           <h2>Prosjekter</h2>
           <div className="project-grid">
-            {[{ title: "Login nettside", desc: "Login nettside med simple funksjoner", img: "Login.png", link: "/projects/login" },
-              { title: "DrumKit", desc: "Drumkit med mulighet til å legge til flere instrumenter", img: "omgdrumkit.png", link: "/projects/drumkit" },
-              { title: "CryptoWidget", desc: "Viser sanntidsdata for kryptovalutaer.", img: "cryptotn.png", link: "/projects/crypto" }].map((project, index) => (
+            {[
+              {
+                title: "Login nettside",
+                desc: "Login nettside med simple funksjoner",
+                img: "Login.png",
+                link: "/projects/login",
+              },
+              {
+                title: "DrumKit",
+                desc: "Drumkit med mulighet til å legge til flere instrumenter",
+                img: "omgdrumkit.png",
+                link: "/projects/drumkit",
+              },
+              {
+                title: "CryptoWidget",
+                desc: "Viser sanntidsdata for kryptovalutaer.",
+                img: "Cryptotn.png",
+                link: "/projects/crypto",
+              },
+            ].map((project, index) => (
               <div className="project-card" key={index}>
-                <Link to={project.link} style={{ textDecoration: "none", color: "inherit" }}>
+                <Link
+                  to={project.link}
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
                   <div className="project-text">
                     <h3>{project.title}</h3>
-                    <p><strong>Beskrivelse:</strong> {project.desc}</p>
+                    <p>
+                      <strong>Beskrivelse:</strong> {project.desc}
+                    </p>
                   </div>
                   <div className="project-image">
                     <img src={project.img} alt={`Prosjekt ${project.title}`} />
@@ -84,10 +109,3 @@ const MainPage = () => {
 };
 
 export default MainPage;
-
-
-
-
-
-
-

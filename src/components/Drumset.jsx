@@ -2,13 +2,54 @@ import React, { useEffect, useState } from "react";
 import Drum from "./Drum"; // Husk å importere Drum-komponenten korrekt.
 
 const drumData = [
-  { name: "Kick", sound: "../kick.wav", key: "a", image: "../kick.png" },
-  { name: "Snare", sound: "../snare.wav", key: "b", image: "../snaredrum.png" },
-  { name: "Hi-Hat", sound: "../hihat.wav", key: "c", image: "../hi-hat.png" },
-  { name: "Open-Hat", sound: "../openhat.wav", key: "d", image: "../open-hat.png" },
-  { name: "Tom", sound: "../tom.wav", key: "e", image: "../tom.png" },
-  { name: "Tink", sound: "../tink.wav", key: "f", image: "../tink.png" },
-  { name: "Ride", sound: "../ride.wav", key: "g", image: "../ride.png" },
+  {
+    name: "Kick",
+    sound: "/TorFolio/kick.wav",
+    key: "a",
+    image: "/TorFolio/kick.png",
+  },
+  {
+    name: "Snare",
+    sound: "/TorFolio/snare.wav",
+    key: "b",
+    image: "/TorFolio/snaredrum.png",
+  },
+  {
+    name: "Hi-Hat",
+    sound: "/TorFolio/hihat.wav",
+    key: "c",
+    image: "/TorFolio/hi-hat.png",
+  },
+  {
+    name: "Open-Hat",
+    sound: "/TorFolio/openhat.wav",
+    key: "d",
+    image: "/TorFolio/open-hat.png",
+  },
+  {
+    name: "Tom",
+    sound: "/TorFolio/tom.wav",
+    key: "e",
+    image: "/TorFolio/tom.png",
+  },
+  {
+    name: "Tink",
+    sound: "/TorFolio/tink.wav",
+    key: "f",
+    image: "/TorFolio/tink.png",
+  },
+  {
+    name: "Ride",
+    sound: "/TorFolio/ride.wav",
+    key: "g",
+    image: "/TorFolio/ride.png",
+  },
+  {
+    name: "Clap",
+    sound: "/TorFolio/clap.wav",
+    key: "h",
+    image: "/TorFolio/clap.png",
+  },
 ];
 
 const DrumSet = () => {
@@ -47,5 +88,3 @@ const DrumSet = () => {
 };
 
 export default DrumSet;
-
-

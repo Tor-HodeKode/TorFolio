@@ -11,12 +11,13 @@ const Drum = ({ name, sound, keyChar, image, onPlay, activeKey }) => {
 
   return (
     <div
-      className={`drum ${isActive ? "active" : ""}`} // Bruker "active" klasse for visuelle effekter
+      className={`drum-button${isActive ? " active" : ""}`}
       onClick={handleClick}
     >
+      <span className="drum-label">
+        {name} ({keyChar.toUpperCase()})
+      </span>
       <img src={image} alt={name} />
-      <p>{name}</p>
-      <p>{keyChar.toUpperCase()}</p>
     </div>
   );
 };

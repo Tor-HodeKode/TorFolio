@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import "../styles/Login.css";
 
-
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(`Logging in with ${username} and password: ${password}`);
+    // Fjernet logging av passord for bedre sikkerhet
   };
 
   return (
@@ -60,4 +59,3 @@ const Login = () => {
 };
 
 export default Login;
-

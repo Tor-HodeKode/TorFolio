@@ -48,7 +48,7 @@ const CryptoWidget = () => {
   return (
     <div className="crypto-widget">
       {/* Opprinnelig bildekilde */}
-      <img src="../cryptosite.png" alt="Crypto Logo" className="crypto-logo" />
+      <img src="/Cryptosite.png" alt="Crypto Logo" className="crypto-logo" />
 
       {/* Sorteringsknapper */}
       <div className="sort-buttons">
@@ -60,9 +60,18 @@ const CryptoWidget = () => {
       <ul className="crypto-list">
         {sortedCrypto.map((coin) => (
           <li key={coin.id} className="crypto-item">
-            <img src={coin.image} alt={coin.name} width="20" className="crypto-icon" />
+            <img
+              src={coin.image}
+              alt={coin.name}
+              width="20"
+              className="crypto-icon"
+            />
             {coin.name} ({coin.symbol.toUpperCase()}): ${coin.current_price}
-            <span className={`price-change ${coin.price_change_percentage_24h >= 0 ? "positive" : "negative"}`}>
+            <span
+              className={`price-change ${
+                coin.price_change_percentage_24h >= 0 ? "positive" : "negative"
+              }`}
+            >
               ({coin.price_change_percentage_24h.toFixed(2)}%)
             </span>
           </li>
