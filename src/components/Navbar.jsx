@@ -9,9 +9,9 @@ const NavBar = () => {
   const getLogo = () => {
     switch (location.pathname) {
       case "/projects/crypto":
-        return "/Basecoin.png"; // Bruker public-mappen
+        return "/TorFolio/Basecoin.png"; // Bruker public-mappen
       default:
-        return "/Logo.png"; // Standard logo for Hjem
+        return "/TorFolio/Logo.png"; // Standard logo for Hjem
     }
   };
 
